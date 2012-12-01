@@ -13,4 +13,9 @@
 
 ## Description
 
-Homepage creates a custom post type where you can drop in any element you like and it will take care of your homepage layout. It is built using a licensed copy of isotope from David DeSandro. [desandro.com](http://desandro.com)
+Homepage oranizes your homepage where you can drop in any element and it takes care of layout.
+
+## Features
+
+* Custom post type to organize homepage
+* Built using a licensed copy of isotope from David DeSandro. [desandro.com](http://desandro.com)
