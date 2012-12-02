@@ -65,6 +65,9 @@ require_once MMM_HOMEPAGE_APP_PATH . '/code/View/Homepage_Shortcode.php';
 // Require custom post type class
 require_once MMM_HOMEPAGE_APP_PATH . '/code/Helper/Homepage_CPT.php';
 
+// Require admin class
+require_once MMM_HOMEPAGE_APP_PATH . '/code/Block/Homepage_Admin.php';
+
 // Require updater class
 //require_once MMM_HOMEPAGE_LIB_PATH . '/vendor/updater/updater.php';
 
@@ -74,7 +77,11 @@ require_once MMM_HOMEPAGE_APP_PATH . '/code/Helper/Homepage_CPT.php';
 
 global  $mmm_homepage_app,
         $mmm_homepage_shortcode,
+        $mmm_homepage_admin,
         $mmm_home_cpt;
+
+// admin pages
+$mmm_homepage_admin = Homepage_Admin::get_instance();
 
 // custom post type class
 $mmm_homepage_cpt = Homepage_CPT::get_instance();

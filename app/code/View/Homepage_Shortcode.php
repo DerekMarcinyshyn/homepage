@@ -52,7 +52,8 @@ if ( ! class_exists( 'Homepage_Shortcode' ) ) :
             $elements_args = array(
                 'post_type'             => 'mmm_homepage',
                 'posts_per_page'        => '-1',
-                'orderby'               => 'random',
+                'orderby'               => 'menu_order',
+                'order'                 => 'ASC',
                 'post_status'           => 'publish'
             );
 
@@ -64,11 +65,11 @@ if ( ! class_exists( 'Homepage_Shortcode' ) ) :
             foreach ( $elements as $element ) {
                 $html .= '<div class="mmm-homepage-element">';
 
+                $html .= '<h3>' . $element->post_title . '</h3>';
                 $html .= $element->post_content;
 
                 $html .= '</div>';
             }
-
 
             $html .= '</div>';
 

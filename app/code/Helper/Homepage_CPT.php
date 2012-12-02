@@ -55,9 +55,9 @@ if ( ! class_exists( 'Homepage_CPT' ) ) :
 
             $args = array(
                 'labels'                => $labels,
-                'hierarchical'          => true,
+                'hierarchical'          => false,
                 'description'           => 'Homepage elements.',
-                'supports'              => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+                'supports'              => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'custom-fields' ),
                 'public'                => false,
                 'show_ui'               => true,
                 'show_in_menu'          => true,

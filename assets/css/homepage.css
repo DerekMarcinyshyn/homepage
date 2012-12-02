@@ -2,6 +2,8 @@
    @author: Derek Marcinyshyn <derek@marcinyshyn.com>
 */
 
+.mmm-homepage-wrapper { display: none; }
+
 .mmm-homepage-wrapper,
 .mmm-homepage-wrapper .mmm-homepage-element {
     -webkit-transition-duration: 0.8s;
@@ -22,6 +24,8 @@
 .mmm-homepage-wrapper .mmm-homepage-element {
     padding: 5px;
     border: 1px solid #ccc;
+    background: #eee;
+    margin-bottom: 20px;
 
     -webkit-transition-property: -webkit-transform, opacity;
     -moz-transition-property:    -moz-transform, opacity;
@@ -29,3 +33,5 @@
     -o-transition-property:      -o-transform, opacity;
     transition-property:         transform, opacity;
 }
+
+.home .page-header { display:none; }
