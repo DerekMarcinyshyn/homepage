@@ -1,6 +1,6 @@
 # Homepage
 
-** Contributors:**
+## Contributors:
 
 * Derek Marcinyshyn [derek.marcinyshyn.com](http://derek.marcinyshyn.com)
 * David DeSandro [desandro.com](http://desandro.com)
@@ -13,7 +13,7 @@
 
 ## Description
 
-Homepage oranizes your homepage where you can drop in any element and it takes care of layout.
+Organizes your homepage where you can drop in any element and it takes care of layout.
 
 ## Features
 
