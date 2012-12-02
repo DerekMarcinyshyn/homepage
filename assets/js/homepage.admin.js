@@ -22,7 +22,7 @@ jQuery(document).ready(function() {
                 data        : data,
 
                 success     : function( data ) {
-                                jQuery('.homepage-message').html('New order saved.');
+                                jQuery('.homepage-message').html('<h2>New order saved.</h2>');
                                 setTimeout(function() { jQuery('.homepage-message').html(''); }, 3000);
                 }
             });

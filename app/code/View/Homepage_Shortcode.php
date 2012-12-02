@@ -46,6 +46,10 @@ if ( ! class_exists( 'Homepage_Shortcode' ) ) :
          */
         function display_homepage( $atts, $content = null ) {
 
+            // add filter to see if there is executable php
+            add_filter( 'the_content', array( $this, 'execute_php' ), 100 );
+
+
             $html = '';
 
             // get the homepage elements
@@ -66,6 +70,9 @@ if ( ! class_exists( 'Homepage_Shortcode' ) ) :
                 $html .= '<div class="mmm-homepage-element">';
 
                 $html .= '<h3>' . $element->post_title . '</h3>';
+
+
+
                 $html .= $element->post_content;
 
                 $html .= '</div>';
@@ -74,6 +81,17 @@ if ( ! class_exists( 'Homepage_Shortcode' ) ) :
             $html .= '</div>';
 
             return $html;
+        }
+
+        function execute_php( $content ) {
+            if ( strpos( $content, "<" . "?php" ) !==false ) {
+                ob_start();
+                eval( "?" . ">" . $content );
+                $content = ob_get_contents();
+                ob_end_clean();
+            }
+
+            return $content;
         }
 
     }

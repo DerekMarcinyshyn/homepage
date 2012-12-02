@@ -70,7 +70,7 @@ if ( ! class_exists( 'Homepage_App' ) ) :
         function register_homepage_widgets() {
             register_sidebar(array(
                 'name'          => __('Home Page Weather', 'homepage'),
-                'id'            => 'sidebar-homepage-weather',
+                'id'            => 'homepage-weather',
                 'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
                 'after_widget'  => '</div></section>',
                 'before_title'  => '<h3>',

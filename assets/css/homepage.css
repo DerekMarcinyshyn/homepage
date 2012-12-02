@@ -22,9 +22,11 @@
 }
 
 .mmm-homepage-wrapper .mmm-homepage-element {
-    padding: 5px;
-    border: 1px solid #ccc;
-    background: #eee;
+    padding: 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
     margin-bottom: 20px;
 
     -webkit-transition-property: -webkit-transform, opacity;
@@ -35,3 +37,7 @@
 }
 
 .home .page-header { display:none; }
+
+.mmm-homepage-element h3 { margin: 0 0 10px 0; }
+.mmm-homepage-element .widget-title { display: none; }
+.mmm-homepage-element .widget { width: 300px; margin-left: 0; }

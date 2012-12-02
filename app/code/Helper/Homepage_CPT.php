@@ -57,7 +57,7 @@ if ( ! class_exists( 'Homepage_CPT' ) ) :
                 'labels'                => $labels,
                 'hierarchical'          => false,
                 'description'           => 'Homepage elements.',
-                'supports'              => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'custom-fields' ),
+                'supports'              => array( 'title', 'editor', 'page-attributes' ),
                 'public'                => false,
                 'show_ui'               => true,
                 'show_in_menu'          => true,
