@@ -76,6 +76,24 @@ if ( ! class_exists( 'Homepage_App' ) ) :
                 'before_title'  => '<h3>',
                 'after_title'   => '</h3>',
             ));
+
+            register_sidebar(array(
+                'name'          => __('Home Page events', 'homepage'),
+                'id'            => 'homepage-events',
+                'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
+                'after_widget'  => '</div></section>',
+                'before_title'  => '<h3>',
+                'after_title'   => '</h3>',
+            ));
+
+            register_sidebar(array(
+                'name'          => __('Home Page Ad Slider', 'homepage'),
+                'id'            => 'homepage-ad-slider',
+                'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
+                'after_widget'  => '</div></section>',
+                'before_title'  => '<h3>',
+                'after_title'   => '</h3>',
+            ));
         }
 
         /**
