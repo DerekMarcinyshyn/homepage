@@ -15,7 +15,7 @@ jQuery(window).load(function() {
 
         masonry: {
             columnWidth: 230,
-            gutterWidth: 20
+            gutterWidth: 10
         },
 
         animationEngine: 'best-available',

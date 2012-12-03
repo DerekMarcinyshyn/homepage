@@ -41,3 +41,5 @@
 .mmm-homepage-element h3 { margin: 0 0 10px 0; }
 .mmm-homepage-element .widget-title { display: none; }
 .mmm-homepage-element .widget { width: 300px; margin-left: 0; }
+
+.widget_mmm_weather { z-index: 9999; }

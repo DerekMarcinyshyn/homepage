@@ -68,13 +68,8 @@ if ( ! class_exists( 'Homepage_Shortcode' ) ) :
             // cycle through the elements
             foreach ( $elements as $element ) {
                 $html .= '<div class="mmm-homepage-element">';
-
                 $html .= '<h3>' . $element->post_title . '</h3>';
-
-
-
                 $html .= $element->post_content;
-
                 $html .= '</div>';
             }
 

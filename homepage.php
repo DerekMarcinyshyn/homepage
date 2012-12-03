@@ -69,7 +69,7 @@ require_once MMM_HOMEPAGE_APP_PATH . '/code/Helper/Homepage_CPT.php';
 require_once MMM_HOMEPAGE_APP_PATH . '/code/Block/Homepage_Admin.php';
 
 // Require updater class
-//require_once MMM_HOMEPAGE_LIB_PATH . '/vendor/updater/updater.php';
+require_once MMM_HOMEPAGE_LIB_PATH . '/vendor/updater/updater.php';
 
 // ====================================
 // = Initialize and setup application =

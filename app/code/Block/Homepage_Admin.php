@@ -35,6 +35,9 @@ if ( ! class_exists( 'Homepage_Admin' ) ) :
          */
         private function __construct() { }
 
+        /**
+         * Drag and drop sort order of the elements AJAX callback function
+         */
         function homepage_update_post_order() {
             global $wpdb;
 
@@ -127,7 +130,7 @@ if ( ! class_exists( 'Homepage_Admin' ) ) :
 
             <?php else: ?>
 
-            <p>No products found, why not <a href="post-new.php?post_type=mmm_homepage">create one?</a></p>
+            <p>No elements found, why not <a href="post-new.php?post_type=mmm_homepage">create one?</a></p>
 
             <?php endif; ?>
             <?php wp_reset_postdata(); // Don't forget to reset again! ?>
@@ -144,6 +147,36 @@ if ( ! class_exists( 'Homepage_Admin' ) ) :
         </div><!-- .wrap -->
 
         <?php
+        }
+
+        /**
+         * github_plugin_updater function
+         *
+         * Github Plugin Updater API
+         * @see     /lib/jkudish/updater.php
+         * @link    https://github.com/jkudish/WordPress-GitHub-Plugin-Updater
+         */
+
+        function github_plugin_updater() {
+            define( 'HOMEPAGE_GITHUB_FORCE_UPDATE', true );
+
+            if ( is_admin() ) {
+                $config = array(
+                    'slug'                  => MMM_HOMEPAGE_DIRECTORY . '/homepage.php',
+                    'proper_folder_name'    => 'homepage',
+                    'api_url'               => 'https://api.github.com/repos/DerekMarcinyshyn/homepage',
+                    'raw_url'               => 'https://raw.github.com/DerekMarcinyshyn/homepage/master',
+                    'github_url'            => 'https://github.com/DerekMarcinyshyn/homepage',
+                    'zip_url'               => 'https://github.com/DerekMarcinyshyn/homepage/zipball/master',
+                    'sslverify'             => false,
+                    'requires'              => '3.0',
+                    'tested'                => '3.5',
+                    'readme'                => 'README.md',
+                    'access_token'          => '',
+                );
+
+                new HomepageUpdater( $config );
+            }
         }
 
     } // end class

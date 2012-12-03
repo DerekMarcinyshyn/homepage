@@ -59,7 +59,7 @@ if ( ! class_exists( 'Homepage_App' ) ) :
             add_action( 'wp_ajax_homepage_update_post_order', array( $mmm_homepage_admin, 'homepage_update_post_order' ) );
 
             // add updater action
-            //add_action( 'admin_init', array( $this, 'github_plugin_updater' ), 10, 0 );
+            add_action( 'admin_init', array( $mmm_homepage_admin, 'github_plugin_updater' ), 10, 0 );
         }
 
         /**
@@ -94,34 +94,6 @@ if ( ! class_exists( 'Homepage_App' ) ) :
             wp_enqueue_style( 'homepage-css' );
         }
 
-        /**
-         * github_plugin_updater function
-         *
-         * Github Plugin Updater API
-         * @see     /lib/jkudish/updater.php
-         * @link    https://github.com/jkudish/WordPress-GitHub-Plugin-Updater
-         */
 
-        function github_plugin_updater() {
-            define( 'WP_GITHUB_FORCE_UPDATE', true );
-
-            if ( is_admin() ) {
-                $config = array(
-                    'slug'                  => MMM_HOMEPAGE_DIRECTORY . '/homepage.php',
-                    'proper_folder_name'    => 'homepage',
-                    'api_url'               => 'https://api.github.com/repos/DerekMarcinyshyn/homepage',
-                    'raw_url'               => 'https://raw.github.com/DerekMarcinyshyn/homepage/master',
-                    'github_url'            => 'https://github.com/DerekMarcinyshyn/homepage',
-                    'zip_url'               => 'https://github.com/DerekMarcinyshyn/homepage/zipball/master',
-                    'sslverify'             => false,
-                    'requires'              => '3.0',
-                    'tested'                => '3.5',
-                    'readme'                => 'README.md',
-                    'access_token'          => '',
-                );
-
-                new WPGitHubUpdater( $config );
-            }
-        }
     }
 endif; // end if class exists
