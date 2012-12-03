@@ -9,7 +9,7 @@ Plugin Name: Homepage
 Plugin URI: http://monasheemountainmultimedia.com/plugins/homepage/
 Description: Organizes your homepage where you can drop in any element and it takes care of layout.
 Author: Derek Marcinyshyn
-Version: 1.1
+Version: 1.0
 Author URI: http://derek.marcinyshyn.com
 License: GPLv2
 

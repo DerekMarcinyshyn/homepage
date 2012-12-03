@@ -5,8 +5,8 @@
 * Derek Marcinyshyn [derek.marcinyshyn.com](http://derek.marcinyshyn.com)
 * David DeSandro [desandro.com](http://desandro.com)
 
-* **Version**: 1.1
-* ~Current Version:1.1~
+* **Version**: 1.0
+* ~Current Version:1.0~
 * **Requires at least**: 3.0
 * **Tested up to**: 3.5-RC2
 * **License**: GPLv2
