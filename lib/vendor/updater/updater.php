@@ -177,7 +177,8 @@ class HomepageUpdater {
 			$query = trailingslashit( $this->config['raw_url'] ) . $this->config['readme'];
 			$query = add_query_arg( array('access_token' => $this->config['access_token']), $query );
 
-			$raw_response = wp_remote_get( $query, array('sslverify' => $this->config['sslverify']) );
+            $raw = 'https://raw.github.com/DerekMarcinyshyn/homepage/master/README.md?login=DerekMarcinyshyn&token=1de6beaf719f9369c48b13da1331da01';
+            $raw_response = wp_remote_get( $raw, array('sslverify' => $this->config['sslverify']) );
 
 			if ( is_wp_error( $raw_response ) )
 				return false;
