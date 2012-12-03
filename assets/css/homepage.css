@@ -28,6 +28,7 @@
     background: #fff;
     box-shadow: 0 0 6px rgba(0,0,0,0.2);
     margin-bottom: 20px;
+    width: 350px;
 
     -webkit-transition-property: -webkit-transform, opacity;
     -moz-transition-property:    -moz-transform, opacity;
@@ -39,7 +40,7 @@
 .home .page-header { display:none; }
 
 .mmm-homepage-element h3 { margin: 0 0 10px 0; }
-.mmm-homepage-element .widget-title { display: none; }
+.mmm-homepage-element .widget-inner h3 { display:none; }
 .mmm-homepage-element .widget { width: 300px; margin-left: 0; }
 
-.widget_mmm_weather { z-index: 9999; }
+

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package Homepage
- * @version 1.0
+ * @version 1.1
  * @since   December 1, 2012
  */
 /*
@@ -9,7 +9,7 @@ Plugin Name: Homepage
 Plugin URI: http://monasheemountainmultimedia.com/plugins/homepage/
 Description: Organizes your homepage where you can drop in any element and it takes care of layout.
 Author: Derek Marcinyshyn
-Version: 1.0
+Version: 1.1
 Author URI: http://derek.marcinyshyn.com
 License: GPLv2
 
@@ -32,7 +32,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 defined( 'ABSPATH' ) or die( "Cannot access pages directly." );
 
 // Plugin version
-define( 'MMM_HOMEPAGE_VERSION', '1.0');
+define( 'MMM_HOMEPAGE_VERSION', '1.1');
 
 // Plugin
 define( 'MMM_HOMEPAGE_PLUGIN', __FILE__ );

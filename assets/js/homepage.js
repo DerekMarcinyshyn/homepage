@@ -14,8 +14,8 @@ jQuery(window).load(function() {
         layoutMode: 'masonry',
 
         masonry: {
-            columnWidth: 230,
-            gutterWidth: 10
+            columnWidth: 10,
+            gutterWidth: 0
         },
 
         animationEngine: 'best-available',
