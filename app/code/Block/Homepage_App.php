@@ -94,6 +94,24 @@ if ( ! class_exists( 'Homepage_App' ) ) :
                 'before_title'  => '<h3>',
                 'after_title'   => '</h3>',
             ));
+
+            register_sidebar(array(
+                'name'          => __('Home Page Featured Business', 'homepage'),
+                'id'            => 'homepage-featured-business',
+                'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
+                'after_widget'  => '</div></section>',
+                'before_title'  => '<h3>',
+                'after_title'   => '</h3>',
+            ));
+
+            register_sidebar(array(
+                'name'          => __('Home Page Business Search', 'homepage'),
+                'id'            => 'homepage-search-business',
+                'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
+                'after_widget'  => '</div></section>',
+                'before_title'  => '<h3>',
+                'after_title'   => '</h3>',
+            ));
         }
 
         /**
