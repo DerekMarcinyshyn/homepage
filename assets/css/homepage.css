@@ -37,8 +37,8 @@
     transition-property:         transform, opacity;
 }
 
+.homepage-loader { width: 50px; margin-left:auto; margin-right:auto; margin-top: 60px; }
 .home .page-header { display:none; }
-
 .mmm-homepage-element h3 { margin: 0 0 10px 0; }
 .mmm-homepage-element .widget-inner h3 { display:none; }
 .mmm-homepage-element .widget { margin-left: 0; }

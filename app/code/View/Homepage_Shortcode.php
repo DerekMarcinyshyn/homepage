@@ -52,6 +52,8 @@ if ( ! class_exists( 'Homepage_Shortcode' ) ) :
 
             $html = '';
 
+            $html .= '<div class="homepage-loader" id="homepage-loader"><img src="' . MMM_HOMEPAGE_URL . '/assets/img/homepage-loader.gif" width="50" height="50" /></div>';
+
             // get the homepage elements
             $elements_args = array(
                 'post_type'             => 'mmm_homepage',

@@ -2,8 +2,8 @@
  * Homepage JS
  * @author: Derek Marcinyshyn <derek@marcinyshyn.com>
  */
-
 jQuery(window).load(function() {
+    jQuery('#homepage-loader').css('display', 'none');
 
     jQuery('.mmm-homepage-wrapper').css('display', 'block');
 
