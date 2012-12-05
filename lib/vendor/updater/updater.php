@@ -4,7 +4,7 @@
 if ( !defined('ABSPATH') )
 	die('-1');
 
-if ( ! class_exists( 'WPGitHubUpdater' ) ) :
+if ( ! class_exists( 'HomepageUpdater' ) ) :
 
 /**
  * @version 1.4
