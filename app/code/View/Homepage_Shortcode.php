@@ -71,7 +71,7 @@ if ( ! class_exists( 'Homepage_Shortcode' ) ) :
             foreach ( $elements as $element ) {
                 $html .= '<div class="mmm-homepage-element">';
                 $html .= '<h3>' . $element->post_title . '</h3>';
-                $html .= $element->post_content;
+                $html .= wpautop( $element->post_content );
                 $html .= '</div>';
             }
 
@@ -80,6 +80,14 @@ if ( ! class_exists( 'Homepage_Shortcode' ) ) :
             return $html;
         }
 
+        /**
+         * execute_php function
+         *
+         * Adds ability to run php code in the editor
+         *
+         * @param $content
+         * @return string
+         */
         function execute_php( $content ) {
             if ( strpos( $content, "<" . "?php" ) !==false ) {
                 ob_start();

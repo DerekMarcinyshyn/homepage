@@ -61,7 +61,7 @@ if ( ! class_exists( 'Homepage_CPT' ) ) :
                 'public'                => false,
                 'show_ui'               => true,
                 'show_in_menu'          => true,
-                'menu_position'         => 200,
+                'menu_position'         => 21,
 
                 'show_in_nav_menus'     => false,
                 'publicly_queryable'    => false,

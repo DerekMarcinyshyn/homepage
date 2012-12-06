@@ -36,6 +36,24 @@ if ( ! class_exists( 'Homepage_Admin' ) ) :
         private function __construct() { }
 
         /**
+         * add menu icon to admin section
+         */
+        function homepage_admin_icon() {
+            global $post_type;
+            ?>
+        <style>
+                <?php if (($_GET['post_type'] == 'mmm_homepage') || ($post_type == 'mmm_homepage')) : ?>
+                    #icon-edit { background:transparent url('<?php echo get_bloginfo('url');?>/wp-admin/images/icons32.png') no-repeat -251px -5px; }
+                <?php endif; ?>
+
+            #adminmenu #menu-posts-mmm_homepage div.wp-menu-image{background:transparent url('<?php echo get_bloginfo('url');?>/wp-admin/images/menu.png') no-repeat scroll -149px -33px;}
+            #adminmenu #menu-posts-mmm_homepage div.wp-menu-image{background-position: -149px -33px;}
+            #adminmenu #menu-posts-mmm_homepage:hover div.wp-menu-image,#adminmenu #menu-posts-mmm_homepage.wp-has-current-submenu div.wp-menu-image{background:transparent url('<?php echo get_bloginfo('url');?>/wp-admin/images/menu.png') no-repeat scroll -149px -1px;}
+        </style>
+        <?php
+        }
+
+        /**
          * Drag and drop sort order of the elements AJAX callback function
          */
         function homepage_update_post_order() {
@@ -87,6 +105,37 @@ if ( ! class_exists( 'Homepage_Admin' ) ) :
                 array( $this, 'set_order_homepage_elements' )
             );
 
+            add_submenu_page(
+                'edit.php?post_type=mmm_homepage',
+                'Help',
+                'Help',
+                'edit_pages', 'homepage-help',
+                array( $this, 'homepage_admin_help' )
+            );
+
+        }
+
+        function homepage_admin_help() {
+            echo '<div class="wrap">';
+            echo '<h2>Homepage Help</h2>';
+            echo '<h4>Widgets</h4>';
+
+            echo '<h5>Home Page Weather</h5>';
+            echo '<code>display_sidebar("homepage-weather");</code>';
+
+            echo '<h5>Home Page Events</h5>';
+            echo '<code>display_sidebar("homepage-events");</code>';
+
+            echo '<h5>Homepage Ad Slider</h5>';
+            echo '<code>display_sidebar("homepage-ad-slider");</code>';
+
+            echo '<h5>Homepage Featured Business</h5>';
+            echo '<code>display_sidebar("homepage-featured-business");</code>';
+
+            echo '<h5>Homepage Weather</h5>';
+            echo '<code>display_sidebar("homepage-weather");</code>';
+
+            echo '</div>';
         }
 
         /**

@@ -40,14 +40,14 @@ if ( ! class_exists( 'Homepage_App' ) ) :
             // add the custom post type
             add_action( 'init', array( $mmm_homepage_cpt, 'register_cpt_mmm_homepage' ) );
 
-            // add shortcode action
-            add_shortcode( 'mmm-homepage', array( $mmm_homepage_shortcode, 'display_homepage' ), 10, 2 );
-
             // add css and js
             add_action( 'init', array( $this, 'homepage_css_js' ) );
 
             // register widgets
             add_action( 'init', array( $this, 'register_homepage_widgets' ) );
+
+            // add shortcode action
+            add_shortcode( 'mmm-homepage', array( $mmm_homepage_shortcode, 'display_homepage' ), 10, 2 );
 
             // add order admin page
             add_action( 'admin_menu', array( $mmm_homepage_admin, 'register_order_menu' ) );
@@ -60,6 +60,9 @@ if ( ! class_exists( 'Homepage_App' ) ) :
 
             // add updater action
             add_action( 'admin_init', array( $mmm_homepage_admin, 'github_plugin_updater' ), 10, 0 );
+
+            // add admin menu icon
+            add_action( 'admin_head', array( $mmm_homepage_admin, 'homepage_admin_icon' ), 10, 0 );
         }
 
         /**
@@ -78,7 +81,7 @@ if ( ! class_exists( 'Homepage_App' ) ) :
             ));
 
             register_sidebar(array(
-                'name'          => __('Home Page events', 'homepage'),
+                'name'          => __('Home Page Events', 'homepage'),
                 'id'            => 'homepage-events',
                 'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
                 'after_widget'  => '</div></section>',
