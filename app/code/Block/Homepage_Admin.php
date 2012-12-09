@@ -119,21 +119,25 @@ if ( ! class_exists( 'Homepage_Admin' ) ) :
             echo '<div class="wrap">';
             echo '<h2>Homepage Help</h2>';
             echo '<h4>Widgets</h4>';
-
-            echo '<h5>Home Page Weather</h5>';
-            echo '<code>display_sidebar("homepage-weather");</code>';
-
-            echo '<h5>Home Page Events</h5>';
-            echo '<code>display_sidebar("homepage-events");</code>';
-
-            echo '<h5>Homepage Ad Slider</h5>';
-            echo '<code>display_sidebar("homepage-ad-slider");</code>';
-
-            echo '<h5>Homepage Featured Business</h5>';
-            echo '<code>display_sidebar("homepage-featured-business");</code>';
+            echo '<p>Add the code below with> in between php opening closing tags</code>';
 
             echo '<h5>Homepage Weather</h5>';
-            echo '<code>display_sidebar("homepage-weather");</code>';
+            echo '<code>dynamic_sidebar("homepage-weather");</code>';
+
+            echo '<h5>Homepage Events</h5>';
+            echo '<code>dynamic_sidebar("homepage-events");</code>';
+
+            echo '<h5>Homepage Ad Slider</h5>';
+            echo '<code>dynamic_sidebar("homepage-ad-slider");</code>';
+
+            echo '<h5>Homepage Featured Business</h5>';
+            echo '<code>dynamic_sidebar("homepage-featured-business");</code>';
+
+            echo '<h5>Homepage Weather</h5>';
+            echo '<code>dynamic_sidebar("homepage-weather");</code>';
+
+            echo '<h5>Homepage RMR Snow</h5>';
+            echo '<code>dynamic_sidebar("homepage-rmr-snow");</code>';
 
             echo '</div>';
         }

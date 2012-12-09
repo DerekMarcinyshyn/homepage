@@ -72,7 +72,7 @@ if ( ! class_exists( 'Homepage_App' ) ) :
          */
         function register_homepage_widgets() {
             register_sidebar(array(
-                'name'          => __('Home Page Weather', 'homepage'),
+                'name'          => __('Homepage Weather', 'homepage'),
                 'id'            => 'homepage-weather',
                 'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
                 'after_widget'  => '</div></section>',
@@ -81,7 +81,7 @@ if ( ! class_exists( 'Homepage_App' ) ) :
             ));
 
             register_sidebar(array(
-                'name'          => __('Home Page Events', 'homepage'),
+                'name'          => __('Homepage Events', 'homepage'),
                 'id'            => 'homepage-events',
                 'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
                 'after_widget'  => '</div></section>',
@@ -90,7 +90,7 @@ if ( ! class_exists( 'Homepage_App' ) ) :
             ));
 
             register_sidebar(array(
-                'name'          => __('Home Page Ad Slider', 'homepage'),
+                'name'          => __('Homepage Ad Slider', 'homepage'),
                 'id'            => 'homepage-ad-slider',
                 'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
                 'after_widget'  => '</div></section>',
@@ -99,7 +99,7 @@ if ( ! class_exists( 'Homepage_App' ) ) :
             ));
 
             register_sidebar(array(
-                'name'          => __('Home Page Featured Business', 'homepage'),
+                'name'          => __('Homepage Featured Business', 'homepage'),
                 'id'            => 'homepage-featured-business',
                 'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
                 'after_widget'  => '</div></section>',
@@ -108,8 +108,17 @@ if ( ! class_exists( 'Homepage_App' ) ) :
             ));
 
             register_sidebar(array(
-                'name'          => __('Home Page Business Search', 'homepage'),
+                'name'          => __('Homepage Business Search', 'homepage'),
                 'id'            => 'homepage-search-business',
+                'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
+                'after_widget'  => '</div></section>',
+                'before_title'  => '<h3>',
+                'after_title'   => '</h3>',
+            ));
+
+            register_sidebar(array(
+                'name'          => __('Homepage RMR Snow', 'homepage'),
+                'id'            => 'homepage-rmr-snow',
                 'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
                 'after_widget'  => '</div></section>',
                 'before_title'  => '<h3>',
