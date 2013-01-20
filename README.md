@@ -13,7 +13,7 @@
 
 ## Description
 
-Organizes your homepage where you can drop in any element and it takes care of layout.
+Organizes your homepage where add elements and then it creates a masonry style of layout.
 
 ## Features
 

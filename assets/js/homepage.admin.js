@@ -22,8 +22,12 @@ jQuery(document).ready(function() {
                 data        : data,
 
                 success     : function( data ) {
-                                jQuery('.homepage-message').html('<h2>New order saved.</h2>');
-                                setTimeout(function() { jQuery('.homepage-message').html(''); }, 3000);
+                                jQuery('.homepage-message').html('<p>New order saved.</p>');
+                                jQuery('.homepage-message').css('display', 'block');
+                                setTimeout(function() {
+                                    jQuery('.homepage-message').html('');
+                                    jQuery('.homepage-message').css('display', 'none');
+                                }, 3500);
                 }
             });
         }

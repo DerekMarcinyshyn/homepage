@@ -117,29 +117,43 @@ if ( ! class_exists( 'Homepage_Admin' ) ) :
 
         function homepage_admin_help() {
             echo '<div class="wrap">';
-            echo '<h2>Homepage Help</h2>';
-            echo '<h4>Widgets</h4>';
-            echo '<p>Add the code below with> in between php opening closing tags</code>';
+            echo '<div id="icon-tools" class="icon32"></div> <h2>Homepage Help</h2>';
 
-            echo '<h5>Homepage Weather</h5>';
-            echo '<code>dynamic_sidebar("homepage-weather");</code>';
+            echo '<p>Advanced usage for using widgets in elements:</p>';
 
-            echo '<h5>Homepage Events</h5>';
-            echo '<code>dynamic_sidebar("homepage-events");</code>';
-
-            echo '<h5>Homepage Ad Slider</h5>';
-            echo '<code>dynamic_sidebar("homepage-ad-slider");</code>';
-
-            echo '<h5>Homepage Featured Business</h5>';
-            echo '<code>dynamic_sidebar("homepage-featured-business");</code>';
-
-            echo '<h5>Homepage Weather</h5>';
-            echo '<code>dynamic_sidebar("homepage-weather");</code>';
-
-            echo '<h5>Homepage RMR Snow</h5>';
-            echo '<code>dynamic_sidebar("homepage-rmr-snow");</code>';
-
-            echo '</div>';
+            echo '
+            <table class="widefat">
+                <thead>
+                    <tr>
+                        <th class="row-title">Widgets</th>
+                        <th>Code</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="row-title"><label for="tablecell">Homepage Weather</label></td>
+                        <td><code style="padding:5px 5px; background: #fefbf3; border:1px solid #ddd;">&lt;?php dynamic_sidebar("homepage-weather"); ?&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td class="row-title"><label for="tablecell">Homepage Events</label></td>
+                        <td><code style="padding:5px 5px; background: #fefbf3; border:1px solid #ddd;">&lt;?php dynamic_sidebar("homepage-events"); ?&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td class="row-title"><label for="tablecell">Homepage Ad Slider</label></td>
+                        <td><code style="padding:5px 5px; background: #fefbf3; border:1px solid #ddd;">&lt;?php dynamic_sidebar("homepage-ad-slider"); ?&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td class="row-title"><label for="tablecell">Homepage Featured Business</label></td>
+                        <td><code style="padding:5px 5px; background: #fefbf3; border:1px solid #ddd;">&lt;?php dynamic_sidebar("homepage-featured-business"); ?&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td class="row-title"><label for="tablecell">Homepage RMR Snow</label></td>
+                        <td><code style="padding:5px 5px; background: #fefbf3; border:1px solid #ddd;">&lt;?php dynamic_sidebar("homepage-rmr-snow"); ?&gt;</code></td>
+                    </tr>
+                 </tbody>
+            </table>
+            </div>
+            ';
         }
 
         /**
@@ -155,7 +169,7 @@ if ( ! class_exists( 'Homepage_Admin' ) ) :
             <?php $elements = new WP_Query( array( 'post_type' => 'mmm_homepage', 'posts_per_page' => -1, 'order' => 'ASC', 'orderby' => 'menu_order' ) ); ?>
             <?php if( $elements->have_posts() ) : ?>
 
-            <div class="homepage-message"></div>
+            <div class="homepage-message updated" style="display:none;"></div>
 
             <table class="wp-list-table widefat fixed posts" id="sortable-table">
                 <thead>
