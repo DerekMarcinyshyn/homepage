@@ -40,8 +40,9 @@ if ( ! class_exists( 'Homepage_App' ) ) :
             // add the custom post type
             add_action( 'init', array( $mmm_homepage_cpt, 'register_cpt_mmm_homepage' ) );
 
-            // add css and js
-            add_action( 'init', array( $this, 'homepage_css_js' ) );
+            // add css and js only on frontend
+            if ( !is_admin() )
+                add_action( 'init', array( $this, 'homepage_css_js' ) );
 
             // register widgets
             add_action( 'init', array( $this, 'register_homepage_widgets' ) );
